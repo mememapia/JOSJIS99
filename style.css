@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  background: #222;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.slot-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.slot {
+  width: 80px;
+  height: 80px;
+  background: #000;
+  border: 2px solid gold;
+  border-radius: 10px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spin-btn {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.spin-btn:hover {
+  background: orange;
+}
+
+.info {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #aaa;
+}
+/* Efek menang */
+.win {
+  animation: glow 1s infinite alternate;
+  border-color: gold;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px gold;
+  }
+  to {
+    box-shadow: 0 0 20px gold;
+  }
+}
+
+.result {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.result.win-text {
+  color: gold;
+  animation: pop 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+/* ============================= */
+/* RESPONSIVE ANDROID / MOBILE */
+/* ============================= */
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .slot-box {
+    gap: 10px;
+  }
+
+  .slot {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+  }
+
+  .spin-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+
+  .result {
+    font-size: 18px;
+  }
+}
+
+/* Extra kecil (HP lama) */
+@media (max-width: 360px) {
+  .slot {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+body {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
